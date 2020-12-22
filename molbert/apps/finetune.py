@@ -153,5 +153,9 @@ class FinetuneSmilesMolbertApp(BaseMolbertApp):
         return parsed_args
 
 
+def main():
+    FinetuneSmilesMolbertApp().run()
+
+
 if __name__ == '__main__':
-    trainer = FinetuneSmilesMolbertApp().run()
+    main()

@@ -27,5 +27,9 @@ class SmilesMolbertApp(BaseMolbertApp):
         return parser
 
 
-if __name__ == '__main__':
+def main():
     SmilesMolbertApp().run()
+
+
+if __name__ == '__main__':
+    main()
