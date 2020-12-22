@@ -44,4 +44,10 @@ setup(
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
     ),
+    entry_points={
+        'console_scripts': [
+            'molbert_smiles = molbert.apps.smiles:main',
+            'molbert_finetune = molbert.apps.finetune:main',
+        ],
+    },
 )

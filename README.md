@@ -31,7 +31,7 @@ After downloading the weights, you can follow `scripts/featurize.py` to load the
 ## Train model from scratch:
 You can use the guacamol dataset (links at the [bottom](#data))
 ```shell script
-python molbert/apps/smiles.py \
+molbert_smiles \
     --train_file data/guacamol_baselines/guacamol_v1_train.smiles \
     --valid_file data/guacamol_baselines/guacamol_v1_valid.smiles \
     --max_seq_length 128 \
@@ -52,7 +52,7 @@ After you have trained a model, and you would like to finetune on a certain trai
 
 For classification you can set can set the mode to `classification` and the `output_size` to 2.
 ```shell script
-python molbert/apps/finetune.py \
+molbert_finetune \
     --train_file path/to/train.csv \
     --valid_file path/to/valid.csv \
     --test_file path/to/test.csv \
@@ -63,7 +63,7 @@ python molbert/apps/finetune.py \
 ```
 For regression set the mode to `regression` and the `output_size` to 1.
 ```shell script
-python molbert/apps/finetune.py \
+molbert_finetune \
     --train_file path/to/train.csv \
     --valid_file path/to/valid.csv \
     --test_file path/to/test.csv \
